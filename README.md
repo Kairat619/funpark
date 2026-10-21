@@ -65,7 +65,7 @@ Both values must be set for the script to be injected. Leave them blank for ordi
 
 The price list form in the hero opens WhatsApp (app or web) with a pre-filled message, in the visitor's language, containing their name and phone number. The visitor taps Send, so the request arrives from their own WhatsApp account. No server or API key is involved.
 
-The receiving number is set with `VITE_WHATSAPP_NUMBER` (digits only, with country code, e.g. `77011234567`). When it is not set, the test number `77024883117` is used. Rebuild after changing it.
+The receiving number is set with `VITE_WHATSAPP_NUMBER` (digits only, with country code, e.g. `77011234567`). When it is not set, `77076085488` is used. The cart's "Proceed to quote" button uses the same number. Rebuild after changing it.
 
 ## Telegram notifications for forms
 

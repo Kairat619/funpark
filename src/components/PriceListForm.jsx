@@ -17,7 +17,7 @@ import flagAZ from '@/assets/flags/AZ.svg';
 import flagMD from '@/assets/flags/MD.svg';
 
 // WhatsApp number that receives price list requests (digits only, with country code)
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '77024883117';
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '77076085488';
 
 // Kazakhstan first, then Russia and the other CIS countries.
 // In each mask, every 0 is one digit of the national number.

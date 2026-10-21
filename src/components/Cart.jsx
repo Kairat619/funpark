@@ -6,6 +6,9 @@ import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext.jsx';
 import { formatPrice } from '@/lib/currency.js';
 
+// Same number as the price list form (digits only, with country code)
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '77076085488';
+
 const Cart = ({ isOpen, onClose }) => {
   const { toast } = useToast();
   const { t } = useLanguage();
@@ -53,7 +56,7 @@ const Cart = ({ isOpen, onClose }) => {
   const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   const handleProceedToTalk = () => {
-    window.open('https://wa.me/77024883117', '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank');
     onClose();
   };
 
