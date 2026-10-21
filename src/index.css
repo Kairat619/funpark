@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  /* Fresh Forest Theme (Default) */
+  :root {
+    --font-playful: "Fredoka", sans-serif;
+    
+    --background: 0 0% 100%;
+    --foreground: 142 47% 8%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 142 47% 8%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 142 47% 8%;
+    
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 142 30% 94%;
+    --secondary-foreground: 142 47% 8%;
+    
+    --muted: 142 30% 96%;
+    --muted-foreground: 142 20% 40%;
+    
+    --accent: 142 76% 88%;
+    --accent-foreground: 142 47% 8%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 142 30% 88%;
+    --input: 142 30% 88%;
+    --ring: 142 76% 36%;
+    
+    --radius: 0.5rem;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 142 47% 8%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 30% 94%;
+    --sidebar-accent-foreground: 142 47% 8%;
+    --sidebar-border: 142 30% 88%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    --background: 142 47% 8%;
+    --foreground: 142 30% 96%;
+    
+    --card: 142 40% 12%;
+    --card-foreground: 142 30% 96%;
+    
+    --popover: 142 40% 12%;
+    --popover-foreground: 142 30% 96%;
+    
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 142 30% 16%;
+    --secondary-foreground: 142 30% 96%;
+    
+    --muted: 142 30% 16%;
+    --muted-foreground: 142 20% 60%;
+    
+    --accent: 142 30% 20%;
+    --accent-foreground: 142 30% 96%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 142 30% 20%;
+    --input: 142 30% 20%;
+    --ring: 142 76% 36%;
+    
+    --sidebar-background: 142 47% 8%;
+    --sidebar-foreground: 142 30% 96%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 30% 16%;
+    --sidebar-accent-foreground: 142 30% 96%;
+    --sidebar-border: 142 30% 20%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  /* Ocean Energy Theme */
+  [data-theme="ocean"] {
+    --background: 0 0% 100%;
+    --foreground: 210 50% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+    
+    --primary: 210 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 210 50% 10%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 30% 40%;
+    
+    --accent: 210 85% 88%;
+    --accent-foreground: 210 50% 10%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 40% 88%;
+    --input: 210 40% 88%;
+    --ring: 210 85% 48%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 50% 10%;
+    --sidebar-primary: 210 85% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 94%;
+    --sidebar-accent-foreground: 210 50% 10%;
+    --sidebar-border: 210 40% 88%;
+    --sidebar-ring: 210 85% 48%;
+  }
+
+  [data-theme="ocean"].dark {
+    --background: 210 50% 10%;
+    --foreground: 210 40% 96%;
+    
+    --card: 210 45% 14%;
+    --card-foreground: 210 40% 96%;
+    
+    --popover: 210 45% 14%;
+    --popover-foreground: 210 40% 96%;
+    
+    --primary: 210 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 40% 18%;
+    --secondary-foreground: 210 40% 96%;
+    
+    --muted: 210 40% 18%;
+    --muted-foreground: 210 30% 60%;
+    
+    --accent: 210 40% 22%;
+    --accent-foreground: 210 40% 96%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 40% 22%;
+    --input: 210 40% 22%;
+    --ring: 210 85% 48%;
+    
+    --sidebar-background: 210 50% 10%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 210 85% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 18%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 210 40% 22%;
+    --sidebar-ring: 210 85% 48%;
+  }
+
+  /* Sunrise Vitality Theme */
+  [data-theme="sunrise"] {
+    --background: 0 0% 100%;
+    --foreground: 25 50% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 25 50% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 50% 10%;
+    
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 25 40% 94%;
+    --secondary-foreground: 25 50% 10%;
+    
+    --muted: 25 40% 96%;
+    --muted-foreground: 25 30% 40%;
+    
+    --accent: 25 95% 88%;
+    --accent-foreground: 25 50% 10%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 25 40% 88%;
+    --input: 25 40% 88%;
+    --ring: 25 95% 53%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 25 50% 10%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 40% 94%;
+    --sidebar-accent-foreground: 25 50% 10%;
+    --sidebar-border: 25 40% 88%;
+    --sidebar-ring: 25 95% 53%;
+  }
+
+  [data-theme="sunrise"].dark {
+    --background: 25 50% 10%;
+    --foreground: 25 40% 96%;
+    
+    --card: 25 45% 14%;
+    --card-foreground: 25 40% 96%;
+    
+    --popover: 25 45% 14%;
+    --popover-foreground: 25 40% 96%;
+    
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 25 40% 18%;
+    --secondary-foreground: 25 40% 96%;
+    
+    --muted: 25 40% 18%;
+    --muted-foreground: 25 30% 60%;
+    
+    --accent: 25 40% 22%;
+    --accent-foreground: 25 40% 96%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 25 40% 22%;
+    --input: 25 40% 22%;
+    --ring: 25 95% 53%;
+    
+    --sidebar-background: 25 50% 10%;
+    --sidebar-foreground: 25 40% 96%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 40% 18%;
+    --sidebar-accent-foreground: 25 40% 96%;
+    --sidebar-border: 25 40% 22%;
+    --sidebar-ring: 25 95% 53%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-variant-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-3d {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-rotate-3d {
+  animation: rotate-3d 20s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s ease-in-out infinite;
+}

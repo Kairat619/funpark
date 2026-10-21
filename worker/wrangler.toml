@@ -1,0 +1,11 @@
+name = "funpark-leads"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+[vars]
+# Site origins allowed to submit forms (comma-separated, no trailing slash)
+ALLOWED_ORIGINS = "https://funpark.kz,https://www.funpark.kz,http://localhost:3000"
+
+# Secrets — set once with:
+#   npx wrangler secret put TELEGRAM_BOT_TOKEN
+#   npx wrangler secret put TELEGRAM_CHAT_ID
